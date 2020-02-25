@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "name": "cozy-konnector-cgrm",
+  "type": "konnector",
+  "language": "node",
+  "icon": "icon.svg",
+  "slug": "template",
+  "source": "git@github.com:lmorel3/cozy-konnector-cgrm.git",
+  "editor": "Cozy",
+  "vendor_link": "https://www.cgrm.fr/",
+  "categories": ["insurance"],
+  "fields": {
+    "login": {
+      "type": "text"
+    },
+    "password": {
+      "type": "password"
+    },
+    "advancedFields": {
+      "folderPath": {
+        "advanced": true,
+        "isRequired": false
+      }
+    }
+  },
+  "data_types": [
+    "refund"
+  ],
+  "screenshots": [],
+  "permissions": {
+    "files": {
+      "type": "io.cozy.files"
+    },
+    "accounts": {
+      "type": "io.cozy.accounts",
+      "verbs": ["GET"]
+    }
+  },
+  "developer": {
+    "name": "Cozy Cloud",
+    "url": "https://cozy.io"
+  },
+  "langs": ["fr", "en"],
+  "locales": {
+    "fr": {
+      "short_description": "Récupère la liste des remboursements",
+      "long_description": "Récupère la liste des remboursements",
+      "permissions": {
+        "files": {
+          "description": "Utilisé pour sauvegarder les factures"
+        },
+        "accounts": {
+          "description": "Utilisé pour obtenir les données du compte"
+        }
+      }
+    },
+    "en": {
+      "short_description": "Fetch a list of refund",
+      "long_description": "Fetch a list of refund",
+      "permissions": {
+        "files": {
+          "description": "Required to save the bills"
+        },
+        "accounts": {
+          "description": "Required to get the account's data"
+        }
+      }
+    }
+  },
+  "manifest_version": "2"
+}
